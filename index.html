@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Plantas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">
+            <a class="header-title-link" href="/index.html">Plantas</a>
+        </h1>
+        <nav>
+            <ul class="navlist">
+                <li class="navlist-item"><a class="navlist-item-link" href="/index.html">Inicio</a></li>
+                <li class="navlist-item"><a class="navlist-item-link" href="/categorias.html">Categorias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table class="datatable">
+            <legend class="datatable-legend">Plantas</legend>
+            <thead>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p class="footer-legend">2023 ❤️ Andres González</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+
+        // crear JSON de plantas
+        let json = [
+            {
+                Nombre: 'Rosa',
+                Categoria: 'Flores',
+                Descripcion: 'Planta ornamental conocida por sus flores generalmente grandes y vistosas.',
+            },
+            {
+                Nombre: 'Tomate',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Planta comestible cultivada por sus frutos, que son utilizados en diversas preparaciones culinarias.',
+            },
+            {
+                Nombre: 'Lavanda',
+                Categoria: 'Hierbas',
+                Descripcion: 'Planta aromática apreciada por su fragancia, comúnmente utilizada en aceites esenciales y productos de cuidado personal.',
+            },
+            {
+                Nombre: 'Ficus Elastica',
+                Categoria: 'Plantas de Interior',
+                Descripcion: 'Planta de interior popular, también conocida como "Higuera de Goma", apreciada por su follaje brillante y fácil cuidado.',
+            },
+            {
+                Nombre: 'Girasol',
+                Categoria: 'Flores',
+                Descripcion: 'Planta conocida por sus flores grandes y amarillas que siguen la dirección del sol a lo largo del día.',
+            },
+            {
+                Nombre: 'Zanahoria',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Raíz comestible de color naranja utilizada en diversas preparaciones culinarias.',
+            },
+            {
+                Nombre: 'Menta',
+                Categoria: 'Hierbas',
+                Descripcion: 'Planta aromática con hojas frescas utilizadas en infusiones, cócteles y en la cocina.',
+            },
+            {
+                Nombre: 'Cactus',
+                Categoria: 'Suculentas',
+                Descripcion: 'Planta suculenta adaptada a ambientes secos, con tallos carnosos y a menudo espinosos.',
+            },
+            {
+                Nombre: 'Orquídea',
+                Categoria: 'Flores',
+                Descripcion: 'Planta ornamental conocida por sus exquisitas y variadas flores.',
+            },
+            {
+                Nombre: 'Espinaca',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Hoja verde comestible rica en nutrientes, utilizada en ensaladas y platos cocidos.',
+            },
+            {
+                Nombre: 'Romero',
+                Categoria: 'Hierbas',
+                Descripcion: 'Hierba aromática con hojas y tallos leñosos, utilizada en la cocina y en productos de cuidado personal.',
+            },
+            {
+                Nombre: 'Aloe Vera',
+                Categoria: 'Suculentas',
+                Descripcion: 'Planta suculenta conocida por sus propiedades medicinales, especialmente para la piel.',
+            },
+            {
+                Nombre: 'Tulipán',
+                Categoria: 'Flores',
+                Descripcion: 'Planta ornamental conocida por sus flores en forma de copa y una amplia variedad de colores.',
+            },
+            {
+                Nombre: 'Papa',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Tubérculo comestible ampliamente utilizado en la cocina.',
+            },
+            {
+                Nombre: 'Albahaca',
+                Categoria: 'Hierbas',
+                Descripcion: 'Hierba aromática utilizada en la cocina italiana y en diversas preparaciones culinarias.',
+            },
+            {
+                Nombre: 'Crisantemo',
+                Categoria: 'Flores',
+                Descripcion: 'Planta ornamental conocida por sus flores densas y variados colores.',
+            },
+            {
+                Nombre: 'Pimiento',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Fruto comestible de diversos colores, utilizado en la cocina para dar sabor y color.',
+            },
+            {
+                Nombre: 'Caléndula',
+                Categoria: 'Flores',
+                Descripcion: 'Planta ornamental conocida por sus flores brillantes y propiedades medicinales.',
+            },
+            {
+                Nombre: 'Cebolla',
+                Categoria: 'Hortalizas',
+                Descripcion: 'Bulbo comestible utilizado en la cocina para dar sabor a diversos platos.',
+            },
+            {
+                Nombre: 'Salvia',
+                Categoria: 'Hierbas',
+                Descripcion: 'Hierba aromática con hojas plateadas, utilizada en la cocina y con propiedades medicinales.',
+            },
+        ];
+
+        let table = document.querySelector('.datatable');
+        table.loadData(json);
+    </script>
+</body>
+
+</html>
