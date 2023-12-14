@@ -25,7 +25,7 @@
 
     <main>
         <article>
-            <img src="https://palmiersetcompagnie.fr/wp-content/uploads/2019/01/IJ-JMG01__F3N7576-Opuntia-macrocentra-violacea.jpg">
+            <img class="plant-imagen">
             
             <div class="plant-info">
                 <h2 class="plant-nombre"></h2>
@@ -46,7 +46,7 @@
 
             document.querySelector(".plant-nombre").innerHTML = planta.Nombre;
             document.querySelector(".plant-categria").innerHTML = planta.Categoria;
-
+            document.querySelector(".plant-imagen").src = planta.ImagenUrl;
             document.querySelector(".plant-descripcion").innerHTML = planta.Descripcion;
         }
     </script>
