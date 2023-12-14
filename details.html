@@ -24,15 +24,15 @@
     </header>
 
     <main>
-        <table class="datatable">
-            <legend class="datatable-legend">Plantas</legend>
-            <thead>
-
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
+        <article>
+            <img src="https://palmiersetcompagnie.fr/wp-content/uploads/2019/01/IJ-JMG01__F3N7576-Opuntia-macrocentra-violacea.jpg">
+            
+            <div class="plant-info">
+                <h2 class="plant-nombre"></h2>
+                <small class="plant-categria"></small>
+                <p class="plant-descripcion"></p>
+            </div>
+        </article>
     </main>
 
     <footer>
@@ -40,6 +40,16 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        if (sessionStorage.numero) {
+            let planta = json.find(obj => obj.Numero == sessionStorage.numero);
+
+            document.querySelector(".plant-nombre").innerHTML = planta.Nombre;
+            document.querySelector(".plant-categria").innerHTML = planta.Categoria;
+
+            document.querySelector(".plant-descripcion").innerHTML = planta.Descripcion;
+        }
+    </script>
 </body>
 
 </html>
