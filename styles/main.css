@@ -33,11 +33,20 @@ main {
     grid-area: main;
     background-color: var(--secondary-light);
     padding: 0 20vh;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer {
     grid-area: footer;
     background-color: var(--primary);
+}
+
+td, th {
+    border: 1px solid var(--primary-light);
+    padding: 0.5rem;
 }
 
 .header-title {
@@ -97,4 +106,53 @@ footer {
 .navlist-item-link:hover {
     color: var(--secondary-light);
     background-color: var(--primary-light);
+}
+
+tfoot {
+    background-color: var(--primary);
+    text-align: center;
+}
+
+tfoot td {
+    padding: 0;
+}
+
+.pagination-link {
+    color: var(--secondary);
+    display: inline-block;
+    padding: 5px 30px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination-link:hover {
+    color: var(--secondary-light);
+    background-color: var(--primary-light);
+}
+
+.table-row {
+    transition: all 0.3s ease;
+}
+
+.table-row:hover {
+    background-color: var(--primary-light);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.is-current {
+    color: var(--secondary-light);
+    text-decoration: underline;
+    background-color: var(--primary-light);
+}
+
+/* Responsive para celular */
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
 }

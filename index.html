@@ -14,15 +14,15 @@
 <body>
     <header>
         <h1 class="header-title">
-            <a class="header-title-link" href="/index.html">Plantas</a>
+            <a class="header-title-link" href="index.html">Plantas</a>
         </h1>
         <nav>
             <ul class="navlist">
-                <li class="navlist-item"><a class="navlist-item-link" href="/index.html">Inicio</a></li>
-                <li class="navlist-item"><a class="navlist-item-link" href="/categorias.html">Categorias</a></li>
+                <li class="navlist-item"><a class="navlist-item-link" href="index.html">Inicio</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <table class="datatable">
             <legend class="datatable-legend">Plantas</legend>
@@ -34,6 +34,7 @@
             </tbody>
         </table>
     </main>
+
     <footer>
         <p class="footer-legend">2023 ❤️ Andres González</p>
     </footer>
@@ -41,7 +42,7 @@
     <script src="scripts/main.js"></script>
     <script>
 
-        // crear JSON de plantas
+        // Crear JSON de plantas
         let json = [
             {
                 Nombre: 'Rosa',
@@ -146,7 +147,10 @@
         ];
 
         let table = document.querySelector('.datatable');
+        
         table.loadData(json);
+        table.paginate(6);
+        table.navegate(1);
     </script>
 </body>
 
