@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Plantas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">
+            <a class="header-title-link" href="index.html">Plantas</a>
+        </h1>
+        <nav>
+            <ul class="navlist">
+                <li class="navlist-item"><a class="navlist-item-link" href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="category-nombre"></h2>
+            <div class="category-plants">
+                <article class="category-plants-item">
+                    <img class="category-plants-item-imagen">
+                    <h3 class="category-plants-item-nombre"></h3>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-legend">2023 ❤️ Andrés González</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        if (sessionStorage.categoria) {
+            let categoria = sessionStorage.categoria;
+            let plants = json.filter(obj => obj.Categoria == categoria);
+
+            document.querySelector(".category-nombre").innerHTML = categoria;
+
+            plants.forEach(plant => {
+                let plantItem = document.querySelector(".category-plants-item").cloneNode(true);
+                plantItem.querySelector(".category-plants-item-imagen").src = plant.ImagenUrl;
+                document.querySelector(".category-plants").appendChild(plantItem);
+                plantItem.querySelector(".category-plants-item-nombre").innerHTML = plant.Nombre;
+                plantItem.addEventListener("click", () => {
+                    sessionStorage.numero = plant.Numero;
+                    location.href = "details.html";
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

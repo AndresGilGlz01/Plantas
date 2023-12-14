@@ -70,8 +70,9 @@ td, th {
 
 .plant-categria {
     font-size: 0.8rem;
-    color: #333;
+    color: #46a17b;
     text-decoration: underline;
+    cursor: pointer ;
 }
 
 .plant-descripcion {
@@ -178,6 +179,49 @@ tfoot td {
     color: var(--secondary-light);
     text-decoration: underline;
     background-color: var(--primary-light);
+}
+
+.category-plants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-plants-item:first-child {
+    display: none;
+}
+
+section article {
+    flex-direction: column  ;
+}
+
+section img {
+    height: 300px;
+    width: 200px;
+}
+
+.category-plants-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--primary-light);
+    background-color: var(--secondary);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.category-plants-item:hover {
+    background-color: var(--primary-light);
+}
+
+.category-plants-item-nombre {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Responsive para celular */

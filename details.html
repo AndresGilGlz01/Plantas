@@ -45,9 +45,15 @@
             let planta = json.find(obj => obj.Numero == sessionStorage.numero);
 
             document.querySelector(".plant-nombre").innerHTML = planta.Nombre;
-            document.querySelector(".plant-categria").innerHTML = planta.Categoria;
             document.querySelector(".plant-imagen").src = planta.ImagenUrl;
             document.querySelector(".plant-descripcion").innerHTML = planta.Descripcion;
+            document.querySelector(".plant-categria").innerHTML = planta.Categoria;
+
+            document.querySelector(".plant-categria").addEventListener("click", (e) => {
+                categoria = e.target.innerHTML;
+                sessionStorage.categoria = categoria;
+                location.href = "categoria.html";
+            });
         }
     </script>
 </body>

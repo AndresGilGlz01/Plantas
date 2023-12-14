@@ -153,6 +153,7 @@ tables.forEach(table => {
         let tr = thead.insertRow();
 
         for (let key in firstElement) {
+            if (key === "ImagenUrl") continue;
             let th = document.createElement('th');
             th.innerHTML = key;
             tr.appendChild(th);
@@ -166,6 +167,7 @@ tables.forEach(table => {
                 location.href = 'details.html';
             });
             for (let key of Object.keys(obj)) {
+                if (key === "ImagenUrl") continue;
                 let td = tr.insertCell();
                 td.textContent = obj[key];
             }
@@ -196,6 +198,8 @@ tables.forEach(table => {
                 link.classList.remove("is-current");
             }
         }
+
+        sessionStorage.lastPage = page;
     }
 
     table.paginate = function (rowsPerPage) {
@@ -227,5 +231,11 @@ let table = document.querySelector('.datatable');
 if (table) {
     table.loadData(json);
     table.paginate(6);
-    table.navegate(1);
+
+    if (sessionStorage.lastPage) {
+        table.navegate(sessionStorage.lastPage);
+    }
+    else {
+        table.navegate(1);
+    }
 }
