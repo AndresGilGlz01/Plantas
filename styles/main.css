@@ -78,6 +78,7 @@ td, th {
 .plant-descripcion {
     font-size: 0.9rem;
     text-align: justify;
+    line-height: 1.3rem;
     color: #333;
 }
 
@@ -240,7 +241,20 @@ section img {
         width: 100%;
         order: 1;
     }
+    thead {
+        position: sticky;
+        top: 0;
+        background-color: var(--primary);
+        color: var(--secondary);
+    }
+    tbody {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
     .plant-info {
         padding: 0;
+    }
+    .pagination-link {
+        display: block;
     }
 }
